@@ -855,7 +855,7 @@ Every node should upgrade their software version to v8.0.0 before the upgrade bl
 ## [v7.0.2 - Carbon](https://github.com/osmosis-labs/osmosis/releases/tag/v7.0.2)
 
 This release fixes an instance of undefined behaviour present in v7.0.0.
-Parts of the code use a function called [`ApplyFuncIfNoErr`]() whose purpose is to catch errors, and if found undo state updates during its execution.
+Parts of the code use a function called `ApplyFuncIfNoErr` whose purpose is to catch errors, and if found undo state updates during its execution.
 It is intended to also catch panics and undo the problematic code's execution.
 Right now a panic in this code block would halt the node, as it would not know how to proceed.
 (But no state change would be committed)
@@ -1026,7 +1026,7 @@ Upgrade instructions for node operators can be found [here](https://github.com/o
 * [\#637](https://github.com/osmosis-labs/osmosis/pull/637) Add [Bech32IBC](https://github.com/osmosis-labs/bech32-ibc/)
 * [\#610](https://github.com/osmosis-labs/osmosis/pull/610) Upgrade to Cosmos SDK v0.44.x
   * Numerous large updates, such as making module accounts be 32 bytes, Rosetta support, etc.
-  * Adds & integrates the [Authz module](https://github.com/cosmos/cosmos-sdk/tree/master/x/authz/spec)
+  * Adds & integrates the [Authz module](https://github.com/cosmos/cosmos-sdk/tree/main/x/authz/spec)
     See: [SDK v0.43.0 Release Notes](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.43.0) For more details
 * [\#610](https://github.com/osmosis-labs/osmosis/pull/610) Upgrade to IBC-v2
 * [\#560](https://github.com/osmosis-labs/osmosis/pull/560) Implements Osmosis [prop32](https://www.mintscan.io/osmosis/proposals/32) -- clawing back the final 20% of unclaimed osmo and ion airdrop.
